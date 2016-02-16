@@ -15,6 +15,14 @@
   padding-left:30px!important;
 }
 
+body {
+  background-image: url('/assets/images/bg.jpg');
+  background-size: cover;
+}
+.login-title{
+  color: #2b3e50;
+}
+
 .submitButtonWidth{
   width:150px !important;
 }

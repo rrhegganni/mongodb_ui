@@ -50,7 +50,7 @@ var Login = React.createClass({
     console.log('form load');
         return (
           <div className="row">
-            <div id="right" className="right-text">
+            <div id="right">
               <form className="form-horizontal  loginFormWidth" onSubmit={this.handleSubmit}>
                <fieldset>
                   <legend className="legendText"><h2 className="login-title"> Apka Parichay </h2></legend>
