@@ -8,8 +8,8 @@ var Home = React.createClass({
         return (
           <div className="row">
             <Menu />
-            <LeftNav stateVar="active" />
-            <div className="col-xs-12 col-md-8 col-lg-9">
+            <LeftNav />
+            <div className="col-xs-12">
               <div className="jumbotron">
                 <p>You don't have any deployments yet -- let's get started:</p>
               </div>
@@ -18,7 +18,7 @@ var Home = React.createClass({
               <div className="jumbotron">
                 <h3>Build New Deployment</h3>
                 <p>I want to build and fully manage a new MongoDB deployment.</p>
-                <a href="#" className="btn btn-success btn-sm">Build New</a>
+                <a href="/newmongodb" className="btn btn-success btn-sm">Build New</a>
               </div>
             </div>
             <div className="col-xs-12 col-md-6 col-lg-6">
