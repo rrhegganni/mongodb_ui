@@ -1,16 +1,14 @@
 var React = require('react');
 var Router=require('react-router');
-var app = express();
-
-
-
+var Menu=require('./menu.jsx');
+var Navigatable = require('react-router-component').NavigatableMixin;
 
 var Login = React.createClass({
 
   userNameEmpty:false,
   passwordEmpty:false,
 
- mixins : [Router.Navigation],
+ mixins: [ Navigatable ],
 
  getInitialState: function() {
     //we are only saving the contributor as an example
@@ -37,10 +35,8 @@ var Login = React.createClass({
         this['passwordEmpty']=true;
       }
       if(isError==false){
-        app.use(express.session({userName: this.state.userName}));
-        location.href='/home';
+        location.href='/home/'+this.state.userName;
       }
-
   },
 
 
@@ -56,7 +52,13 @@ var Login = React.createClass({
     console.log('form load');
         return (
           <div className="row">
-          <form className="form-horizontal pull-right loginFormWidth" onSubmit={this.handleSubmit}>
+          <Menu/>
+          <div id="left" className="jumbotron left-text col-sm-12 col-md-7">
+<h2>Build & Manage</h2>
+<p>Protecting your mission critical MongoDB data has never been easier or more affordable. MongoDB Cloud Manager provides continuous, online backup with point-in-time recovery of replica sets and consistent snapshots of sharded clusters with limited performance impact. The service is designed and managed by the team that created MongoDB, so you can rest assured that you always have a reliable backup.</p>
+            </div>
+            <div id="right" className="right-text">
+          <form className="form-horizontal  loginFormWidth" onSubmit={this.handleSubmit}>
            <fieldset>
               <legend className="legendText"> Enter your credentials </legend>
               <div className="form-group">
@@ -82,6 +84,7 @@ var Login = React.createClass({
               </div>
               </fieldset>
             </form>
+            </div>
           </div>
         )
     }

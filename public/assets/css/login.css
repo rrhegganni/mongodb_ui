@@ -23,3 +23,13 @@
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important
   font-size:12px !important;
 }
+
+
+
+.left-text{
+  float:left !important;
+}
+
+.right-text{
+  float:right !important;
+}

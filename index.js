@@ -18,9 +18,10 @@ app.get('/', function (req, res) {
    });
 });
 
-app.get('/home', function (req, res) {
+app.get('/home/:slug', function (req, res) {
   var component = require('./components/home.jsx');
   var markup = ReactDOMServer.renderToString(React.createElement(component,{}));
+
   res.render('home',
     {
       'markup': markup
