@@ -2,7 +2,6 @@ var React = require('react');
 
 var LeftNav = React.createClass({
     render: function() {
-      console.log(this.props.stateVar);
       return (
         <div>
           <div className="list-group">

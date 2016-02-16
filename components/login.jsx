@@ -1,15 +1,13 @@
 var React = require('react');
 var Router=require('react-router');
 var Menu=require('./menu.jsx');
-var Navigatable = require('react-router-component').NavigatableMixin;
 
 var Login = React.createClass({
 
   userNameEmpty:false,
   passwordEmpty:false,
 
- mixins: [ Navigatable ],
-
+ 
  getInitialState: function() {
     //we are only saving the contributor as an example
     //of how to save data changes for final submission
