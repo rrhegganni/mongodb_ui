@@ -32,7 +32,9 @@ var ansibleHelper = (function() {
 
 	    console.log(body);
 		var base_dir='/home/ec2-user/users/';
-		var file_dir='/hosts';
+    var file_dir='/hosts_' + body.app_name;
+    console.log(file_dir);
+
 		var hosts = base_dir.concat(body.user_id,file_dir);
       var command = new Ansible.Playbook().playbook('/home/ec2-user/hackrunch/infra_code/profiles/backup').inventory(hosts)
                                     .variables({baseApp:"mongodb",application:body.app_name,user:body.user_id}).verbose('vvvv');

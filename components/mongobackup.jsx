@@ -11,15 +11,25 @@ var MongoBackup = React.createClass({
          success: false
        };
      },
+     componentWillMount:function(){
+       var app = "";
+       var data = this.props.data;
+       if(data.length > 0){
+         app = data[0].app_name;
+       }
+        this.setState({app_name: app});
+     },
      setAppName:function(event){
          this.setState({app_name:event.target.value});
      },
      handleSubmit: function(){
+
          this.setState({timer:true});
          var scope = this;
          setTimeout(function(){
            scope.setState({timer:false , success:true});
-          }, 10000);
+          }, 60000);
+          console.log("app::"+this.state.app_name);
           superagent
             .post('/db/backup')
             .send({baseApp:"mongodb", user_id:"NGP", app_name: this.state.app_name})
@@ -34,8 +44,9 @@ var MongoBackup = React.createClass({
             });
      },
     render: function() {
+
         return (
-        <div class="row">
+        <div className="row">
           <Menu />
           <LeftNav />
           <div className="col-sm-12 col-md-6">
