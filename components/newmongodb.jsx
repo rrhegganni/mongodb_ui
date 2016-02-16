@@ -28,9 +28,11 @@ var NewMongoDB = React.createClass({
         "user_id" : "NGP"
         }
         this.setState({timer:true});
+        var scope = this;
         setTimeout(function(){
-          this.setState({timer:false});
-         }, 5000);
+          scope.setState({timer:false});
+          location.href = '/home';
+         }, 60000);
         superagent
           .post('/db/deploy')
           .send(payload)
@@ -73,12 +75,16 @@ var NewMongoDB = React.createClass({
                 <div className="form-group">
                   <div className="col-lg-10 col-lg-offset-4">
                     <button type="reset" className="btn btn-default">Cancel</button>
-                    <button type="submit" className="btn btn-default" onClick={this.handleSubmit}>Submit</button>
+                    <button type="button" className="btn btn-default" onClick={this.handleSubmit}>Submit</button>
                   </div>
                 </div>
+
               </fieldset>
             </form>
             </div>
+            {this.state.timer == true ? <img src="http://i.stack.imgur.com/MnyxU.gif" alt="HTML5 Icon" /> : <div></div>}
+
+
           </div>
         )
     }
