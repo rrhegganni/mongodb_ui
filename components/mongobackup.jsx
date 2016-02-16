@@ -22,7 +22,7 @@ var MongoBackup = React.createClass({
           }, 60000);
           superagent
             .post('/db/backup')
-            .send({baseApp:this.state.app_name})
+            .send({baseApp:this.state.app_name, user_id:"NGP"})
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
             .end(function(err, res){
