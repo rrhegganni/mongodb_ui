@@ -28,7 +28,7 @@ var MongoBackup = React.createClass({
          var scope = this;
          setTimeout(function(){
            scope.setState({timer:false , success:true});
-          }, 60000);
+          }, 10000);
           console.log("app::"+this.state.app_name);
           superagent
             .post('/db/backup')
