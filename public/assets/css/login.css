@@ -1,0 +1,25 @@
+.fieldSize{
+  width:200px !important;
+}
+
+.labelFieldSize{
+  width:100px !important;
+}
+
+.loginFormWidth{
+  width:400px !important;
+  padding-top:50px !important;
+}
+
+.submitDivAlign{
+  padding-left:30px!important;
+}
+
+.submitButtonWidth{
+  width:150px !important;
+}
+
+.legendText{
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important
+  font-size:12px !important;
+}
