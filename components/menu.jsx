@@ -2,7 +2,6 @@ var React = require('react');
 
 var DummyComponent = React.createClass({
     render: function() {
-    console.log("Dummy"+this.props.userName);
         return (
           <div>
             <nav className="navbar navbar-inverse">

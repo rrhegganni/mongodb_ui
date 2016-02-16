@@ -1,4 +1,9 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var DynamicComponent = require('../components/mongobackup.jsx');
-ReactDOM.render(React.createElement(DynamicComponent,{}), document.getElementById('mount'));
+var superagent = require('superagent');
+superagent
+  .get('/db/rakesh')
+  .end(function(err, res){
+    ReactDOM.render(React.createElement(DynamicComponent,{data:res.body.dbs}), document.getElementById('mount'));
+  });

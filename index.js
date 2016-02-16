@@ -117,7 +117,7 @@ app.get('/newmongodb', function (req, res) {
 
 app.get('/mongobackup', function (req, res) {
   var component = require('./components/mongobackup.jsx');
-  var markup = ReactDOMServer.renderToString(React.createElement(component,{}));
+  var markup = ReactDOMServer.renderToString(React.createElement(component,{data:[]}));
   res.render('mongobackup',
     {
       'markup': markup
