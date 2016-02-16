@@ -7,9 +7,9 @@ var ansibleHelper = (function() {
     };
 
     instance.checkPlaybook = function(body){
-      console.log("inside check playbook
+      console.log("inside check playbook");
 	  	    console.log(body);
-		
+
       var command = new Ansible.Playbook().playbook('/home/ec2-user/hackrunch/infra_code/profiles/hackit').inventory('/home/ec2-user/hackrunch/infra_code/vars/appVars/mongodb/hosts')
                                     .variables({baseApp:"mongodb",application:body.app_name,user:body.user_id}).verbose('vvvv');
 			command.on('stdout', function(data) { console.log(data.toString()); });
@@ -25,12 +25,12 @@ var ansibleHelper = (function() {
           console.error(error);
       })
     };
-	
-	
+
+
 	instance.backupPlaybook = function(body){
       console.log("inside check playbook");
-	  
-	    console.log(body);		
+
+	    console.log(body);
 		var base_dir='/home/ec2-user/users/';
 		var file_dir='/hosts';
 		var hosts = base_dir.concat(body.user_id,file_dir);

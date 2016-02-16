@@ -97,7 +97,7 @@ app.get('/home', function (req, res) {
   req.session['userId']=req.query.userId;
 
   iso.add('', {moundPoint: req.query.userId});
-  var markup = ReactDOMServer.renderToString(React.createElement(component,{'userName':req.session['userId']}));
+  var markup = ReactDOMServer.renderToString(React.createElement(component,{data:[]}));
   res.render('home',
     {
       'markup': markup,
