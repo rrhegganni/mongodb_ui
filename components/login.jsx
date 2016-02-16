@@ -35,7 +35,7 @@ var Login = React.createClass({
         this['passwordEmpty']=true;
       }
       if(isError==false){
-        location.href='/home/'+this.state.userName;
+        location.href='/home?userId='+this.state.userName;
       }
   },
 
@@ -62,18 +62,20 @@ var Login = React.createClass({
            <fieldset>
               <legend className="legendText"> Enter your credentials </legend>
               <div className="form-group">
+
                 <label for="userName" className="col-lg-2 control-label labelFieldSize">User Name</label>
-                  <div class="col-lg-10">
+                  <div>
                     <input type="text" className="form-control fieldSize" id="userName" onChange={this.setUserName} placeholder="Enter your user name"/>
-                    {this.userNameEmpty==true?<div> User Name is empty </div>:""}
+                    {this.userNameEmpty==true?<div className="errorDivAlign"> User Name is empty </div>:""}
                   </div>
+
               </div>
 
               <div className="form-group">
                 <label for="inputPassword" className="col-lg-2 control-label labelFieldSize">Password</label>
-                  <div class="col-lg-10">
+                  <div>
                     <input type="password" className="form-control fieldSize" id="inputPassword" onChange={this.setPassword} placeholder="Password" />
-                    {this.passwordEmpty==true?<div> Password empty </div>:""}
+                    {this.passwordEmpty==true?<div className="errorDivAlign"> Password empty </div>:""}
                   </div>
               </div>
 
