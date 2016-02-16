@@ -1,14 +1,14 @@
 var React = require('react');
 
-var Login = require('./login.jsx');
-var LeftNav = require('./leftnav.jsx')
+var LeftNav = require('./leftnav.jsx');
+var Menu = require('./menu.jsx');
 
 var Home = React.createClass({
     render: function() {
         return (
-          <div>
-            <LeftNav />
-            <Login />
+          <div className="row">
+            <Menu />
+            <LeftNav stateVar="active" />
           </div>
         )
     }

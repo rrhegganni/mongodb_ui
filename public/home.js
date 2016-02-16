@@ -19669,8 +19669,8 @@
 
 	var React = __webpack_require__(2);
 
-	var Login = __webpack_require__(163);
 	var LeftNav = __webpack_require__(164);
+	var Menu = __webpack_require__(172);
 
 	var Home = React.createClass({
 	  displayName: 'Home',
@@ -19678,9 +19678,9 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      null,
-	      React.createElement(LeftNav, null),
-	      React.createElement(Login, null)
+	      { className: 'row' },
+	      React.createElement(Menu, null),
+	      React.createElement(LeftNav, { stateVar: 'active' })
 	    );
 	  }
 	});
@@ -19688,48 +19688,168 @@
 	module.exports = Home;
 
 /***/ },
-/* 163 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(2);
-
-	var Login = React.createClass({
-	  displayName: 'Login',
-
-	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      null,
-	      'Login'
-	    );
-	  }
-	});
-
-	module.exports = Login;
-
-/***/ },
+/* 163 */,
 /* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(2);
 
 	var LeftNav = React.createClass({
-	  displayName: 'LeftNav',
+	  displayName: "LeftNav",
 
 	  render: function render() {
+	    console.log(this.props.stateVar);
 	    return React.createElement(
-	      'div',
-	      null,
-	      'LeftNav'
+	      "div",
+	      { className: "col-xs-6 col-md-4 col-lg-3" },
+	      React.createElement(
+	        "div",
+	        { className: "list-group" },
+	        React.createElement(
+	          "ul",
+	          { className: "nav nav-pills nav-stacked" },
+	          React.createElement(
+	            "li",
+	            { className: "btn-success" },
+	            React.createElement(
+	              "a",
+	              { href: "#" },
+	              "Home"
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            React.createElement(
+	              "a",
+	              { href: "#" },
+	              "Backup"
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            React.createElement(
+	              "a",
+	              { href: "#" },
+	              "Recovery"
+	            )
+	          )
+	        )
+	      )
 	    );
 	  }
 	});
 
 	module.exports = LeftNav;
+
+/***/ },
+/* 165 */,
+/* 166 */,
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */,
+/* 171 */,
+/* 172 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(2);
+
+	var DummyComponent = React.createClass({
+	  displayName: "DummyComponent",
+
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "nav",
+	        { className: "navbar navbar-default" },
+	        React.createElement(
+	          "div",
+	          { className: "container-fluid" },
+	          React.createElement(
+	            "div",
+	            { className: "navbar-header" },
+	            React.createElement(
+	              "button",
+	              { type: "button", className: "navbar-toggle collapsed", "data-toggle": "collapse", "data-target": "#bs-example-navbar-collapse-1" },
+	              React.createElement(
+	                "span",
+	                { className: "sr-only" },
+	                "Toggle navigation"
+	              ),
+	              React.createElement("span", { className: "icon-bar" }),
+	              React.createElement("span", { className: "icon-bar" }),
+	              React.createElement("span", { className: "icon-bar" })
+	            ),
+	            React.createElement(
+	              "a",
+	              { className: "navbar-brand", href: "#" },
+	              "HackCrunch DB Manager"
+	            )
+	          ),
+	          React.createElement(
+	            "div",
+	            { className: "collapse navbar-collapse", id: "bs-example-navbar-collapse-1" },
+	            React.createElement(
+	              "ul",
+	              { className: "nav navbar-nav navbar-right" },
+	              React.createElement(
+	                "li",
+	                null,
+	                React.createElement(
+	                  "a",
+	                  { href: "#" },
+	                  "Document"
+	                )
+	              ),
+	              React.createElement(
+	                "li",
+	                { "class": "dropdown" },
+	                React.createElement(
+	                  "a",
+	                  { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-expanded": "false" },
+	                  "Rakesh",
+	                  React.createElement("span", { className: "caret" })
+	                ),
+	                React.createElement(
+	                  "ul",
+	                  { className: "dropdown-menu", role: "menu" },
+	                  React.createElement(
+	                    "li",
+	                    null,
+	                    React.createElement(
+	                      "a",
+	                      { href: "#" },
+	                      "Profile"
+	                    )
+	                  ),
+	                  React.createElement(
+	                    "li",
+	                    null,
+	                    React.createElement(
+	                      "a",
+	                      { href: "#" },
+	                      "Logout"
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+
+	module.exports = DummyComponent;
 
 /***/ }
 /******/ ]);
