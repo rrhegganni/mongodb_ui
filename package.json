@@ -19,8 +19,11 @@
     "react-router": "~2.0.0",
     "react-redirect": "~1.0.0",
     "express-session": "~1.13.0",
-    "iso": "~4.2.0"
+    "iso": "~4.2.0",
+    "react-router": "~2.0.0",
+    "superagent": "^1.7.2"
   },
+
   "devDependencies": {
     "babel-core": "~6.2.1",
     "babel-loader": "^6.2.0",
