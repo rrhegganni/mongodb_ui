@@ -19,7 +19,7 @@ var DummyComponent = React.createClass({
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul className="nav navbar-nav navbar-right">
                     <li><a href="#">Document</a></li>
-                    <li class="dropdown">
+                    <li className="dropdown">
                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Rakesh<span className="caret"></span></a>
                      <ul className="dropdown-menu" role="menu">
                        <li><a href="#">Profile</a></li>
