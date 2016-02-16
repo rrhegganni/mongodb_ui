@@ -67,8 +67,10 @@ app.get('/db/:userid', function(httpRequest, httpResponse) {
 
 app.post('/db/backup', function(httpRequest, httpResponse) {
   console.log('POST executing for asset: %s ', httpRequest.url);
-  backup.createCronTab();
-  httpResponse.sendStatus(200);
+  ansibleHelper.backupPlaybook(httpRequest.body);
+  httpResponse.writeHead(200, setResponseHeader);
+  var resp = { status: "success"}
+  httpResponse.end(JSON.stringify(resp));
 });
 
 
