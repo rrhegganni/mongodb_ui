@@ -2,3 +2,8 @@
   list-style-type: none;
   display: inline-block;
 }
+.dropdownnew{
+  color : #2b3e50;
+  height: 33px;
+  width: 100%;
+}
