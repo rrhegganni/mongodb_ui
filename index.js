@@ -38,7 +38,7 @@ var setResponseHeader = {
 app.post('/db/deploy', function(httpRequest, httpResponse) {
   console.log('SEARCH executing for asset: %s ', httpRequest.url);
 
-  var body = httpRequest.body ;
+  var body = JSON.parse(httpRequest.body) ;
   console.log(body);
   ansibleHelper.checkPlaybook(body);
   users.push(body);
@@ -67,7 +67,8 @@ app.get('/db/:userid', function(httpRequest, httpResponse) {
 
 app.post('/db/backup', function(httpRequest, httpResponse) {
   console.log('POST executing for asset: %s ', httpRequest.url);
-  ansibleHelper.backupPlaybook(httpRequest.body);
+  var body = JSON.parse(httpRequest.body) ;
+  ansibleHelper.backupPlaybook(body);
   httpResponse.writeHead(200, setResponseHeader);
   var resp = { status: "success"}
   httpResponse.end(JSON.stringify(resp));
