@@ -8,7 +8,8 @@ var NewMongoDB = React.createClass({
   getInitialState: function() {
        return {
        app_name:"",
-       cluster_type:"replica"
+       cluster_type:"replica",
+       timer: false
      };
    },
    setAppName:function(event){
@@ -21,14 +22,15 @@ var NewMongoDB = React.createClass({
 
    handleSubmit: function(){
 
-
        var payload = {"instance_size" : "small",
         "cluster_type" : this.state.cluster_type,
         "app_name" : this.state.app_name,
-        "user_id" : "rakesh"
+        "user_id" : "NGP"
         }
-        console.log(payload);
-
+        this.setState({timer:true});
+        setTimeout(function(){
+          this.setState({timer:false});
+         }, 5000);
         superagent
           .post('/db/deploy')
           .send(payload)
