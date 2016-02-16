@@ -3,11 +3,15 @@ var React = require('react');
 var bodyParser = require('body-parser');
 var ReactDOMServer = require('react-dom/server');
 
+
 var backup = require('./modules/backup');
 var ansibleHelper = require('./modules/ansibleHelper');
 
 var users = [];
 
+var session = require('express-session');
+var Iso = require('iso');
+var iso = new Iso();
 
 require('node-jsx-babel').install();
 var app = express();
@@ -22,6 +26,7 @@ app.use(bodyParser.json({
 
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
+app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }}))
 
 
 
@@ -84,17 +89,22 @@ app.get('/', function (req, res) {
    });
 });
 
-app.get('/home/:slug', function (req, res) {
+app.get('/home', function (req, res) {
   var component = require('./components/home.jsx');
-  var markup = ReactDOMServer.renderToString(React.createElement(component,{}));
+  req.session['userId']=req.query.userId;
 
+  iso.add('', {moundPoint: req.query.userId});
+  var markup = ReactDOMServer.renderToString(React.createElement(component,{'userName':req.session['userId']}));
   res.render('home',
     {
-      'markup': markup
-   });
+      'markup': markup,
+      'moundPoint': iso.render()
+    }
+  );
 });
 
 app.get('/newmongodb', function (req, res) {
+  console.log("New Mongo DB"+req.session.userId);
   var component = require('./components/newmongodb.jsx');
   var markup = ReactDOMServer.renderToString(React.createElement(component,{}));
   res.render('newmongodb',

@@ -33,3 +33,8 @@
 .right-text{
   float:right !important;
 }
+
+.errorDivAlign{
+  padding-left:100px !important;
+  font-color:#FF0000 !important;
+}
