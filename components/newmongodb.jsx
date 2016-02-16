@@ -82,7 +82,7 @@ var NewMongoDB = React.createClass({
               </fieldset>
             </form>
             </div>
-            {this.state.timer == true ? <img src="http://i.stack.imgur.com/MnyxU.gif" alt="HTML5 Icon" /> : <div></div>}
+            {this.state.timer == true ? <div className="col-sm-12 col-md-4 col-lg-offset-1"><img src="http://i.stack.imgur.com/MnyxU.gif" alt="HTML5 Icon" /></div> : <div></div>}
 
 
           </div>
