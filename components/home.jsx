@@ -11,10 +11,11 @@ var Home = React.createClass({
       var i = 1;
       var divVal = <div className='col-xs-12'><div className='jumbotron'><p>You don't have any deployments yet -- let's get started:</p></div></div>;
       var cols = this.props.data.map(function(app){
+        var appUri = "mongodb://node1.mongodb." + app.user_id+ "." + app.app_name + ".hackit.hackcrunch.com:8080,node2.mongodb." + app.user_id + "." + app.app_name + ".hackit.hackcrunch.com:8080,node3.mongodb." + app.user_id + "." + app.app_name + ".hackit.hackcrunch.com:8080/?replicaSet=" + app.user_id + "_" + app.app_name + "_hackitMongoReplica";
         return (
             <tr>
               <td>{i++}</td>
-              <td>{app.app_name.toUpperCase()}</td>
+              <td><a href={appUri}>{app.app_name.toUpperCase()}</a></td>
               <td>{app.cluster_type.toUpperCase()}</td>
               <td>{app.instance_size.toUpperCase()}</td>
             </tr>
