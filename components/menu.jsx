@@ -2,6 +2,7 @@ var React = require('react');
 
 var DummyComponent = React.createClass({
     render: function() {
+    console.log("Dummy"+this.props.userName);
         return (
           <div>
             <nav className="navbar navbar-default">
@@ -20,7 +21,7 @@ var DummyComponent = React.createClass({
                   <ul className="nav navbar-nav navbar-right">
                     <li><a href="#">Document</a></li>
                     <li className="dropdown">
-                     <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Rakesh<span className="caret"></span></a>
+                     <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{this.props.userName}<span className="caret"></span></a>
                      <ul className="dropdown-menu" role="menu">
                        <li><a href="#">Profile</a></li>
                        <li><a href="#">Logout</a></li>

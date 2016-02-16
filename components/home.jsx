@@ -4,10 +4,12 @@ var LeftNav = require('./leftnav.jsx');
 var Menu = require('./menu.jsx');
 
 var Home = React.createClass({
+
     render: function() {
+      console.log("server Side Rendering "+this.props.userName);
         return (
           <div className="row">
-            <Menu />
+            <Menu userName={this.props.userName}/>
             <LeftNav />
             <div className="col-xs-12">
               <div className="jumbotron">
