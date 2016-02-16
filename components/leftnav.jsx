@@ -7,9 +7,9 @@ var LeftNav = React.createClass({
         <div>
           <div className="list-group">
             <ul className="leftnav">
-              <li><a href="#"  className="btn btn-default btn-lg try">Home</a></li>
-              <li><a href="#"  className="btn btn-default btn-lg">BackUp</a></li>
-              <li><a href="#"  className="btn btn-default btn-lg">Recovery</a></li>
+              <li><a href="/home"  className="btn btn-success btn-lg">Home</a></li>
+              <li><a href="/mongobackup"  className="btn btn-default btn-lg">BackUp</a></li>
+              <li><a href="/mongorecovery"  className="btn btn-default btn-lg">Recovery</a></li>
             </ul>
           </div>
         </div>
