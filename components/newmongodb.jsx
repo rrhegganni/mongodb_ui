@@ -1,4 +1,5 @@
 var React = require('react');
+var superagent = require('superagent');
 
 var LeftNav = require('./leftnav.jsx');
 var Menu = require('./menu.jsx');
@@ -27,6 +28,19 @@ var NewMongoDB = React.createClass({
         "user_id" : "rakesh"
         }
         console.log(payload);
+
+        superagent
+          .post('/db/deploy')
+          .send(payload)
+          .set('Accept', 'application/json')
+          .set('Content-Type', 'application/json')
+          .end(function(err, res){
+            if (err || !res.ok) {
+              console.log(err);
+            } else {
+              console.log(res.body);
+            }
+          });
    },
     render: function() {
         return (
