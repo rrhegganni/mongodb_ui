@@ -19669,8 +19669,8 @@
 
 	var React = __webpack_require__(2);
 
-	var LeftNav = __webpack_require__(164);
-	var Menu = __webpack_require__(229);
+	var LeftNav = __webpack_require__(163);
+	var Menu = __webpack_require__(164);
 
 	var Home = React.createClass({
 	  displayName: 'Home',
@@ -19680,7 +19680,66 @@
 	      'div',
 	      { className: 'row' },
 	      React.createElement(Menu, null),
-	      React.createElement(LeftNav, { stateVar: 'active' })
+	      React.createElement(LeftNav, { stateVar: 'active' }),
+	      React.createElement(
+	        'div',
+	        { className: 'col-xs-12 col-md-8 col-lg-9' },
+	        React.createElement(
+	          'div',
+	          { className: 'jumbotron' },
+	          React.createElement(
+	            'p',
+	            null,
+	            'You don\'t have any deployments yet -- let\'s get started:'
+	          )
+	        )
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'col-xs-12 col-md-6 col-lg-6' },
+	        React.createElement(
+	          'div',
+	          { className: 'jumbotron' },
+	          React.createElement(
+	            'h3',
+	            null,
+	            'Build New Deployment'
+	          ),
+	          React.createElement(
+	            'p',
+	            null,
+	            'I want to build and fully manage a new MongoDB deployment.'
+	          ),
+	          React.createElement(
+	            'a',
+	            { href: '#', className: 'btn btn-success btn-sm' },
+	            'Build New'
+	          )
+	        )
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'col-xs-12 col-md-6 col-lg-6' },
+	        React.createElement(
+	          'div',
+	          { className: 'jumbotron' },
+	          React.createElement(
+	            'h3',
+	            null,
+	            'Manage Existing Deployment'
+	          ),
+	          React.createElement(
+	            'p',
+	            null,
+	            'I have a MongoDB deployment already and I want to use Cloud Manager to manage it.'
+	          ),
+	          React.createElement(
+	            'a',
+	            { href: '#', className: 'btn btn-success btn-sm' },
+	            'Manage Existing'
+	          )
+	        )
+	      )
 	    );
 	  }
 	});
@@ -19688,8 +19747,7 @@
 	module.exports = Home;
 
 /***/ },
-/* 163 */,
-/* 164 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -19703,19 +19761,19 @@
 	    console.log(this.props.stateVar);
 	    return React.createElement(
 	      "div",
-	      { className: "col-xs-6 col-md-4 col-lg-3" },
+	      null,
 	      React.createElement(
 	        "div",
 	        { className: "list-group" },
 	        React.createElement(
 	          "ul",
-	          { className: "nav nav-pills nav-stacked" },
+	          { className: "leftnav" },
 	          React.createElement(
 	            "li",
-	            { className: "btn-success" },
+	            null,
 	            React.createElement(
 	              "a",
-	              { href: "#" },
+	              { href: "#", className: "btn btn-default btn-lg try" },
 	              "Home"
 	            )
 	          ),
@@ -19724,8 +19782,8 @@
 	            null,
 	            React.createElement(
 	              "a",
-	              { href: "#" },
-	              "Backup"
+	              { href: "#", className: "btn btn-default btn-lg" },
+	              "BackUp"
 	            )
 	          ),
 	          React.createElement(
@@ -19733,7 +19791,7 @@
 	            null,
 	            React.createElement(
 	              "a",
-	              { href: "#" },
+	              { href: "#", className: "btn btn-default btn-lg" },
 	              "Recovery"
 	            )
 	          )
@@ -19746,71 +19804,7 @@
 	module.exports = LeftNav;
 
 /***/ },
-/* 165 */,
-/* 166 */,
-/* 167 */,
-/* 168 */,
-/* 169 */,
-/* 170 */,
-/* 171 */,
-/* 172 */,
-/* 173 */,
-/* 174 */,
-/* 175 */,
-/* 176 */,
-/* 177 */,
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */,
-/* 200 */,
-/* 201 */,
-/* 202 */,
-/* 203 */,
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -19868,7 +19862,7 @@
 	              ),
 	              React.createElement(
 	                "li",
-	                { "class": "dropdown" },
+	                { className: "dropdown" },
 	                React.createElement(
 	                  "a",
 	                  { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-expanded": "false" },

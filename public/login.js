@@ -19653,7 +19653,20 @@
 /* 160 */,
 /* 161 */,
 /* 162 */,
-/* 163 */
+/* 163 */,
+/* 164 */,
+/* 165 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(2);
+	var ReactDOM = __webpack_require__(159);
+	var DynamicComponent = __webpack_require__(166);
+	ReactDOM.render(React.createElement(DynamicComponent, {}), document.getElementById('mount'));
+
+/***/ },
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19784,6 +19797,7 @@
 
 	module.exports = Login;
 
+<<<<<<< HEAD
 /***/ },
 /* 164 */,
 /* 165 */
@@ -24827,5 +24841,7 @@
 	exports['default'] = _createRouterHistory2['default'](_historyLibCreateHashHistory2['default']);
 	module.exports = exports['default'];
 
+=======
+>>>>>>> createMongo
 /***/ }
 /******/ ]);

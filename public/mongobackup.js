@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(166);
+	module.exports = __webpack_require__(167);
 
 
 /***/ },
@@ -19656,18 +19656,19 @@
 /* 163 */,
 /* 164 */,
 /* 165 */,
-/* 166 */
+/* 166 */,
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(2);
 	var ReactDOM = __webpack_require__(159);
-	var DynamicComponent = __webpack_require__(167);
+	var DynamicComponent = __webpack_require__(168);
 	ReactDOM.render(React.createElement(DynamicComponent, {}), document.getElementById('mount'));
 
 /***/ },
-/* 167 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
