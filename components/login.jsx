@@ -53,7 +53,7 @@ var Login = React.createClass({
             <div id="right">
               <form className="form-horizontal  loginFormWidth" onSubmit={this.handleSubmit}>
                <fieldset>
-                  <legend className="legendText"><h2 className="login-title"> Apka Parichay </h2></legend>
+                  <legend className="legendText"><h2 className="login-title"><img src="/assets/images/Tesco_Logo.svg.png" className="logoimg" /> Unified Cloud Management </h2></legend>
                   <div className="form-group">
 
                     <label for="userName" className="col-lg-2 control-label labelFieldSize login-title">User Name</label>

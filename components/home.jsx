@@ -25,7 +25,7 @@ var Home = React.createClass({
       return (
           <div className="row">
             <Menu />
-            <LeftNav />
+            <LeftNav colorChanger="home"/>
             {this.props.data.length == 0 ? divVal : divTab}
             <div className="col-xs-12 col-md-6 col-lg-6">
               <div className="jumbotron">
@@ -38,7 +38,7 @@ var Home = React.createClass({
               <div className="jumbotron">
                 <h3>Manage Existing Deployment</h3>
                 <p>I have a MongoDB deployment already and I want to use Cloud Manager to manage it.</p>
-                <a href="#" className="btn btn-success btn-sm">Manage Existing</a>
+                <a href="/mongorecovery" className="btn btn-success btn-sm">Manage Existing</a>
               </div>
             </div>
           </div>

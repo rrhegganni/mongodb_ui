@@ -50,7 +50,7 @@ var NewMongoDB = React.createClass({
         return (
           <div>
             <Menu />
-            <LeftNav />
+            <LeftNav colorChanger="home"/>
             <div className="col-sm-12 col-md-6">
             <form className="form-horizontal">
               <fieldset>
@@ -74,8 +74,8 @@ var NewMongoDB = React.createClass({
 
                 <div className="form-group">
                   <div className="col-lg-10 col-lg-offset-4">
-                    <button type="reset" className="btn btn-default">Cancel</button>
-                    <button type="button" className="btn btn-default" onClick={this.handleSubmit}>Submit</button>
+                    <button type="reset" className="btn btn-success">Cancel</button>
+                    <button type="button" className="btn btn-success" onClick={this.handleSubmit}>Submit</button>
                   </div>
                 </div>
 

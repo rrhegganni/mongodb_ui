@@ -7,12 +7,17 @@
 }
 
 .loginFormWidth{
-  width:400px !important;
+  width:470px !important;
   padding-top:50px !important;
 }
 
 .submitDivAlign{
   padding-left:30px!important;
+}
+
+.logoimg{
+  height: 30px;
+  width: 80px;
 }
 
 body {

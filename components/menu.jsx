@@ -13,7 +13,7 @@ var DummyComponent = React.createClass({
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                   </button>
-                  <a className="navbar-brand" href="#">HackCrunch DB Manager</a>
+                  <a className="navbar-brand" href="#">TESCO Unified Cloud Manager</a>
                 </div>
 
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
